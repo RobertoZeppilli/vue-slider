@@ -9,8 +9,7 @@ let app = new Vue(
                 "img/photo4.jpg",
                 "img/photo5.jpg"
             ],
-            imageIndex: 0,
-            iconIndex: 0
+            imageIndex: 0
         },
         methods: {
             prevImage: function () {
@@ -26,9 +25,6 @@ let app = new Vue(
                 if (this.imageIndex == this.images.length) {
                     this.imageIndex = 0;
                 }
-            },
-            circleClick: function () {
-                
             }
         }
     }
