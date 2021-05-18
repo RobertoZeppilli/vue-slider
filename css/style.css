@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    height: 500px;
+    width: 800px;
+    margin: auto;
+}
+
+.prev,
+.next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+}
+
+.prev i,
+.next i {
+    font-size: 2em;
+    cursor: pointer;
+}
+.images {
+    width: calc(100% - 100px);
+    height: 100%;
+}
+
+.images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circles {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 15px;
+    background-color: hsla(81, 72%, 60%, 0.4);
+}
+
+.circles i {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.active {
+    color: hsla(81, 72%, 60%);
+}
+.not-active {
+    color: hsla(81, 72%, 60%, 0.3);
+}
