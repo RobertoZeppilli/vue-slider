@@ -30,7 +30,13 @@
 .prev i,
 .next i {
     font-size: 2em;
+    transition: transform .2s ease-in-out;
     cursor: pointer;
+}
+
+.prev i:hover,
+.next i:hover {
+    transform: scale(1.4);
 }
 .images {
     width: calc(100% - 100px);
@@ -68,15 +74,15 @@
 
 #title {
     display: flex;
-    text-align: center;
-    padding: 10px 0;
     height: 80px;
+    padding: 10px 0;
+    text-align: center;
     background-color: hsl(0, 30%, 10%);
 }
 #title h1 {
     margin: auto;
-    letter-spacing: .2em;
     font-size: 2.3rem;
-    color: #fff;
     font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: .2em;
+    color: #fff;
 }

@@ -20,14 +20,12 @@ let app = new Vue(
         methods: {
             prevImage: function () {
                 this.imageIndex--;
-
                 if (this.imageIndex == -1) {
                     this.imageIndex = this.images.length - 1;
                 }
             },
             nextImage: function () {
                 this.imageIndex++;
-
                 if (this.imageIndex == this.images.length) {
                     this.imageIndex = 0;
                 }
