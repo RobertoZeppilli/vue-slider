@@ -9,8 +9,14 @@ let app = new Vue(
                 "img/photo4.jpg",
                 "img/photo5.jpg"
             ],
-            imageIndex: 0
+            imageIndex: 0,
+            timer: null
         },
+
+        mounted: function () {
+            this.startSlide();
+        },
+
         methods: {
             prevImage: function () {
                 this.imageIndex--;
@@ -25,6 +31,9 @@ let app = new Vue(
                 if (this.imageIndex == this.images.length) {
                     this.imageIndex = 0;
                 }
+            },
+            startSlide: function () {
+                this.timer = setInterval(this.nextImage, 4500);
             }
         }
     }
